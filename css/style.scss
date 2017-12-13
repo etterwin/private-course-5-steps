@@ -81,9 +81,20 @@ body {
   }
 }
 
+@keyframes mainAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .caption {
   text-transform: uppercase;
   font-weight: 600;
+  opacity: 0;
+  animation: mainAnimation  0.5s ease-in-out forwards;
   @media screen and (max-width: 600px) {
     font-size: 28px;
   }
@@ -92,12 +103,16 @@ body {
 .text {
   font-size: 18px;
   margin: 10px 0;
+  opacity: 0;
+  animation: mainAnimation  0.5s ease-in-out 0.3s forwards;
 }
 
 .form {
   max-width: 400px;
   margin: 0 0 0 auto;
   padding: 30px;
+  opacity: 0;
+  animation: mainAnimation  0.5s ease-in-out 0.5s forwards;
   @media screen and (max-width: 480px){
     padding: 15px;
   }
